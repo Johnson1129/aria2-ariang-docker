@@ -15,12 +15,12 @@ echo "Start aria2 with secure config"
 --enable-rpc --rpc-listen-all  \
 --rpc-certificate=/root/conf/key/aria2.crt \
 --rpc-private-key=/root/conf/key/aria2.key \
---rpc-secret="$RPC_SECRET" --rpc-secure \
+--rpc-secret="$RPC_SECRET" --rpc-secure
 
 else
 echo "Start aria2 with standard mode"
 /usr/bin/aria2c --conf-path="/root/conf/aria2.conf" -D \
---enable-rpc --rpc-listen-all \
+--enable-rpc --rpc-listen-all
 fi
 
 if [ "$ENABLE_CADDY" = "true" ]; then
