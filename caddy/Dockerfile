@@ -4,6 +4,7 @@ LABEL AUTHOR=Junv<wahyd4@gmail.com>
 
 WORKDIR /root
 
+ENV ENABLE_CADDY=true
 ENV RPC_SECRET=Hello
 ENV ENABLE_AUTH=false
 ENV DOMAIN=0.0.0.0:80
